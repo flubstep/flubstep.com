@@ -7,27 +7,48 @@
   margin: 40px 0;
 }
 
+@keyframes clockwise {
+  from {
+    transform: rotate(-315deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes anticlockwise {
+  from {
+    transform: rotate(45deg);
+  }
+  to {
+    transform: rotate(-315deg);
+  }
+}
+
 .BackgroundStripes {
   position: fixed;
   display: flex;
-  top: -100vh;
-  left: 200px;
-  height: 300vh;
-  width: 200vw;
-  transform: rotate(45deg);
+  align-items: center;
+  justify-content: center;
+  top: 0vh;
+  left: 0vw;
+  height: 100vh;
+  width: 100vw;
   z-index: -10;
 }
 
 .BackgroundStripes .stripe-left {
-  height: 100%;
-  width: 25%;
+  height: 400vw;
+  width: 400px;
   background-color: rgba(255, 255, 255, 0.1);
+  animation: clockwise linear 600s infinite;
 }
 
 .BackgroundStripes .stripe-right {
-  height: 100%;
-  width: 25%;
+  height: 400vw;
+  width: 400px;
   background-color: rgba(0, 0, 0, 0.1);
+  animation: anticlockwise linear 480s infinite;
 }
 
 .ProjectSummary {
@@ -70,14 +91,6 @@
   }
 
   .BackgroundStripes {
-    position: fixed;
-    display: flex;
-    top: -20vh;
-    left: 200px;
-    height: 300vh;
-    width: 100vw;
-    transform: rotate(45deg);
-    z-index: -10;
   }
 
   .ProjectSummary {
