@@ -46,7 +46,7 @@
 }
 
 .ProjectSummary .project-title {
-  font-size: 24px;
+  font-size: 20px;
   margin-top: 10px;
 }
 
@@ -85,6 +85,6 @@
   }
 
   .Column {
-    margin-right: 40px;
+    margin-right: 60px;
   }
 }
