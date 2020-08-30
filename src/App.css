@@ -67,8 +67,11 @@
 }
 
 .ProjectSummary .project-title {
-  font-size: 20px;
   margin-top: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
 }
 
 .ProjectSummary .tag {
