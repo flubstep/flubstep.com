@@ -55,7 +55,7 @@
 }
 
 @media (min-width: 854px) {
-  .columns-container {
+  .ProjectSection {
     display: flex;
   }
 
@@ -87,4 +87,58 @@
   .Column {
     margin-right: 60px;
   }
+}
+
+@keyframes fadeup-50 {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeup-75 {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  75% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadein-75 {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.TitleSection {
+  animation: fadeup-50 500ms ease-in;
+}
+
+.DescriptionSection {
+  animation: fadeup-75 1000ms ease-in;
+}
+
+.ProjectSummary {
+  animation: fadein-75 2000ms ease-in;
 }

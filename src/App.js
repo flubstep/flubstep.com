@@ -6,9 +6,9 @@ function Column({children}) {
   return <div className="Column">{children}</div>
 }
 
-function Section({children, ...rest}) {
+function Section({className, children, ...rest}) {
   return (
-    <div className="Section" {...rest}>
+    <div className={'Section ' + className} {...rest}>
       {children}
     </div>
   )
@@ -74,13 +74,13 @@ function App() {
   return (
     <div className="App">
       <BackgroundStripes />
-      <Section>
+      <Section className="TitleSection">
         <div className="title">
           Albert Sheu <span className="text-red subtitle">{' // '}許國恆</span>
         </div>
         <div className="subtitle">and his internet presence</div>
       </Section>
-      <Section>
+      <Section className="DescriptionSection">
         <div>
           I am a <span className="text-red">fullstack engineer</span> based out
           of New York.
@@ -94,7 +94,7 @@ function App() {
           best.
         </div>
       </Section>
-      <Section className="columns-container">
+      <Section className="ProjectSection">
         <Column>
           <ProjectSummary
             imageUrl={'/images/extreme-clicking-screenshot.png'}
