@@ -37,7 +37,9 @@ function ProjectSummary({
 }) {
   return (
     <div className="ProjectSummary">
-      <img alt={title} src={imageUrl} />
+      <a target="_blank" rel="noopener noreferrer" href={linkUrl}>
+        <img alt={title} src={imageUrl} />
+      </a>
       <div className="project-title">
         <a target="_blank" rel="noopener noreferrer" href={linkUrl}>
           {title}
