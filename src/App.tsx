@@ -1,35 +1,171 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+function Column({ children }: { children?: React.ReactNode }) {
+  return <div className="Column">{children}</div>;
 }
 
-export default App
+function Section({ className, children }: { className?: string; children?: React.ReactNode }) {
+  return <div className={"Section " + className}>{children}</div>;
+}
+
+function BackgroundStripes() {
+  return (
+    <div className="BackgroundStripes">
+      <div className="stripe-left" />
+      <div className="stripe-right" />
+    </div>
+  );
+}
+
+function MidDot() {
+  return <span>{" · "}</span>;
+}
+
+function ProjectSummary({
+  imageUrl,
+  title,
+  codeUrl,
+  linkUrl,
+  explanationUrl,
+  tags,
+}: {
+  imageUrl: string;
+  title: string;
+  codeUrl?: string;
+  linkUrl?: string;
+  explanationUrl?: string;
+  tags: string[];
+}) {
+  return (
+    <div className="ProjectSummary">
+      <a target="_blank" rel="noopener noreferrer" href={linkUrl}>
+        <img alt={title} src={imageUrl} />
+      </a>
+      <div className="project-title">
+        <a target="_blank" rel="noopener noreferrer" href={linkUrl}>
+          {title}
+        </a>
+      </div>
+      <div className="project-tags">
+        {codeUrl && (
+          <span className="tag">
+            <a target="_blank" rel="noopener noreferrer" href={codeUrl}>
+              code
+            </a>
+            <MidDot />
+          </span>
+        )}
+        {tags.map((tag, index) => (
+          <span key={tag} className="tag">
+            {tag} {index + 1 < tags.length && <MidDot />}
+          </span>
+        ))}
+        {explanationUrl && (
+          <span className="tag">
+            <MidDot />
+            <a target="_blank" rel="noopener noreferrer" href={explanationUrl}>
+              explanation
+            </a>
+          </span>
+        )}
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <div className="App">
+      <BackgroundStripes />
+      <Section className="TitleSection">
+        <div className="title">
+          Albert Sheu <span className="text-red subtitle">{" // "}許國恆</span>
+        </div>
+        <div className="subtitle">and his internet presence</div>
+      </Section>
+      <Section className="DescriptionSection">
+        <div>
+          I am a <span className="text-red">programmer</span> based out of New York.
+          <br />
+          <br />
+          My work has typically been as a generalist role with early-stage companies and startups;
+          I've largely been supporting application development across a lot of tech, including with
+          AWS, React, Unity, and WebGL.
+        </div>
+      </Section>
+      <Section className="ProjectSection">
+        <Column>
+          <ProjectSummary
+            imageUrl={"/images/extreme-clicking-screenshot.png"}
+            title={"Extreme clicking"}
+            codeUrl={"https://github.com/flubstep/extreme-clicking-demo"}
+            linkUrl={"https://extreme-clicking.flubdemo.com/"}
+            explanationUrl={"https://arxiv.org/abs/1708.02750"}
+            tags={["react web", "machine learning", "image annotation"]}
+          />
+          <ProjectSummary
+            imageUrl={"/images/flubworld-screenshot.png"}
+            title={"Flubworld"}
+            codeUrl={"https://github.com/flubstep/deception"}
+            linkUrl={"http://flubworld.com/"}
+            tags={["three.js", "collaborative"]}
+          />
+          <ProjectSummary
+            imageUrl={"/images/puppyflat-screenshot.png"}
+            title={"Puppyflat"}
+            codeUrl={"https://github.com/flubstep/puppyflat"}
+            linkUrl={"https://github.com/flubstep/puppyflat"}
+            tags={["löve2d", "game development"]}
+          />
+        </Column>
+        <Column>
+          <ProjectSummary
+            imageUrl={"/images/clapping-music-screenshot.png"}
+            title={"Clapping music"}
+            codeUrl={"https://github.com/flubstep/extreme-clicking-demo"}
+            linkUrl={"https://clapping-music.flubdemo.com/"}
+            explanationUrl={"https://www.youtube.com/watch?v=FcFyl8amoEE"}
+            tags={["react web", "modern minimalist music", "steve reich"]}
+          />
+          <ProjectSummary
+            imageUrl={"/images/cropper-screenshot.png"}
+            title={"Image cropper"}
+            codeUrl={"https://github.com/flubstep/extreme-clicking-demo"}
+            linkUrl={"https://cropper.flubdemo.com/"}
+            tags={["react web", "component", "image annotation"]}
+          />
+          <ProjectSummary
+            imageUrl={"/images/relevant-futurama-screenshot.png"}
+            title={"Futurama quotes"}
+            linkUrl={"http://relevantfuturamaquote.com/"}
+            tags={["futurama", "search", "jquery", "ffmpeg"]}
+          />
+        </Column>
+        <Column>
+          <ProjectSummary
+            imageUrl={"/images/lidar-ransac-screenshot.png"}
+            title={"LIDAR RANSAC"}
+            codeUrl={"https://github.com/flubstep/extreme-clicking-demo"}
+            linkUrl={"https://lidar-ransac.flubdemo.com/"}
+            explanationUrl={"https://en.wikipedia.org/wiki/Random_sample_consensus"}
+            tags={["three.js", "computer vision", "lidar"]}
+          />
+          <ProjectSummary
+            imageUrl={"/images/quora-screenshot.png"}
+            title={"Webnode parallelization"}
+            linkUrl={"https://www.quora.com/q/quora/Improving-Site-Speed"}
+            tags={["python", "parallelization", "site speed"]}
+          />
+          <ProjectSummary
+            imageUrl={"/images/engvalues-screenshot.png"}
+            title={"Engineering value cards"}
+            codeUrl={"https://github.com/flubstep/extreme-clicking-demo"}
+            linkUrl={"https://engvalues.herokuapp.com/"}
+            tags={["react web", "tech culture", "engineering management"]}
+          />
+        </Column>
+      </Section>
+    </div>
+  );
+}
+export default App;
