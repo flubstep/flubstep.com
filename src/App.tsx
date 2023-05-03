@@ -1,8 +1,16 @@
 import "./App.css";
 
-function Column({ children }: { children?: React.ReactNode }) {
-  return <div className="Column">{children}</div>;
-}
+import puppyflatScreenshot from "./images/puppyflat-screenshot.png";
+import extremeClickingScreenshot from "./images/extreme-clicking-screenshot.png";
+import flubworldScreenshot from "./images/flubworld-screenshot.png";
+import clappingMusicScreenshot from "./images/clapping-music-screenshot.png";
+import cropperScreenshot from "./images/cropper-screenshot.png";
+import releventFuturamaScreenshot from "./images/relevant-futurama-screenshot.png";
+import lidarRansacScreenshot from "./images/lidar-ransac-screenshot.png";
+import quoraScreenshot from "./images/quora-screenshot.png";
+import engValuesScreenshot from "./images/engvalues-screenshot.png";
+import pandasetLidarRendering from "./images/pandaset-lidar-rendering.png";
+import { Image } from "@chakra-ui/react";
 
 function Section({ className, children }: { className?: string; children?: React.ReactNode }) {
   return <div className={"Section " + className}>{children}</div>;
@@ -28,6 +36,7 @@ function ProjectSummary({
   linkUrl,
   explanationUrl,
   tags,
+  span = 1,
 }: {
   imageUrl: string;
   title: string;
@@ -35,11 +44,18 @@ function ProjectSummary({
   linkUrl?: string;
   explanationUrl?: string;
   tags: string[];
+  span?: number;
 }) {
   return (
     <div className="ProjectSummary">
       <a target="_blank" rel="noopener noreferrer" href={linkUrl}>
-        <img alt={title} src={imageUrl} />
+        <Image
+          boxSize={220}
+          objectFit="contain"
+          alt={title}
+          src={imageUrl}
+          bgColor="rgba(0, 0, 0, 0.5)"
+        />
       </a>
       <div className="project-title">
         <a target="_blank" rel="noopener noreferrer" href={linkUrl}>
@@ -90,80 +106,92 @@ function App() {
           <br />
           My work has typically been as a generalist role with early-stage companies and startups;
           I've largely been supporting application development across a lot of tech, including with
-          AWS, React, Unity, and WebGL.
+          AWS, React, Unity, and WebGL. I enjoy working on all sorts of problems!
         </div>
       </Section>
+      <h4>LiDAR Visualization</h4>
       <Section className="ProjectSection">
-        <Column>
-          <ProjectSummary
-            imageUrl={"/images/extreme-clicking-screenshot.png"}
-            title={"Extreme clicking"}
-            codeUrl={"https://github.com/flubstep/extreme-clicking-demo"}
-            linkUrl={"https://extreme-clicking.flubdemo.com/"}
-            explanationUrl={"https://arxiv.org/abs/1708.02750"}
-            tags={["react web", "machine learning", "image annotation"]}
-          />
-          <ProjectSummary
-            imageUrl={"/images/flubworld-screenshot.png"}
-            title={"Flubworld"}
-            codeUrl={"https://github.com/flubstep/deception"}
-            linkUrl={"http://flubworld.com/"}
-            tags={["three.js", "collaborative"]}
-          />
-          <ProjectSummary
-            imageUrl={"/images/puppyflat-screenshot.png"}
-            title={"Puppyflat"}
-            codeUrl={"https://github.com/flubstep/puppyflat"}
-            linkUrl={"https://github.com/flubstep/puppyflat"}
-            tags={["löve2d", "game development"]}
-          />
-        </Column>
-        <Column>
-          <ProjectSummary
-            imageUrl={"/images/clapping-music-screenshot.png"}
-            title={"Clapping music"}
-            codeUrl={"https://github.com/flubstep/extreme-clicking-demo"}
-            linkUrl={"https://clapping-music.flubdemo.com/"}
-            explanationUrl={"https://www.youtube.com/watch?v=FcFyl8amoEE"}
-            tags={["react web", "modern minimalist music", "steve reich"]}
-          />
-          <ProjectSummary
-            imageUrl={"/images/cropper-screenshot.png"}
-            title={"Image cropper"}
-            codeUrl={"https://github.com/flubstep/extreme-clicking-demo"}
-            linkUrl={"https://cropper.flubdemo.com/"}
-            tags={["react web", "component", "image annotation"]}
-          />
-          <ProjectSummary
-            imageUrl={"/images/relevant-futurama-screenshot.png"}
-            title={"Futurama quotes"}
-            linkUrl={"http://relevantfuturamaquote.com/"}
-            tags={["futurama", "search", "jquery", "ffmpeg"]}
-          />
-        </Column>
-        <Column>
-          <ProjectSummary
-            imageUrl={"/images/lidar-ransac-screenshot.png"}
-            title={"LIDAR RANSAC"}
-            codeUrl={"https://github.com/flubstep/extreme-clicking-demo"}
-            linkUrl={"https://lidar-ransac.flubdemo.com/"}
-            explanationUrl={"https://en.wikipedia.org/wiki/Random_sample_consensus"}
-            tags={["three.js", "computer vision", "lidar"]}
-          />
-          <ProjectSummary
-            imageUrl={"/images/quora-screenshot.png"}
-            title={"Webnode parallelization"}
-            linkUrl={"https://www.quora.com/q/quora/Improving-Site-Speed"}
-            tags={["python", "parallelization", "site speed"]}
-          />
-          <ProjectSummary
-            imageUrl={"/images/engvalues-screenshot.png"}
-            title={"Engineering value cards"}
-            codeUrl={"https://github.com/flubstep/extreme-clicking-demo"}
-            linkUrl={"https://engvalues.herokuapp.com/"}
-            tags={["react web", "tech culture", "engineering management"]}
-          />
-        </Column>
+        <ProjectSummary
+          imageUrl={pandasetLidarRendering}
+          title={"Pandaset LiDAR Rendering"}
+          codeUrl={"https://github.com/flubstep/extreme-clicking-demo"}
+          linkUrl={"https://www.youtube.com/watch?v=TGMo-WQCqv8&ab_channel=flubstep"}
+          tags={["webgl", "lidar"]}
+          span={2}
+        />
+        <ProjectSummary
+          imageUrl={lidarRansacScreenshot}
+          title={"LiDAR RANSAC"}
+          codeUrl={"https://github.com/flubstep/extreme-clicking-demo"}
+          linkUrl={"https://lidar-ransac.flubdemo.com/"}
+          explanationUrl={"https://en.wikipedia.org/wiki/Random_sample_consensus"}
+          tags={["three.js", "computer vision", "lidar"]}
+        />
+      </Section>
+      <h4>Software Development</h4>
+      <Section className="ProjectSection">
+        <ProjectSummary
+          imageUrl={quoraScreenshot}
+          title={"Webnode parallelization"}
+          linkUrl={"https://www.quora.com/q/quora/Improving-Site-Speed"}
+          tags={["python", "parallelization", "site speed"]}
+        />
+        <ProjectSummary
+          imageUrl={engValuesScreenshot}
+          title={"Engineering value cards"}
+          codeUrl={"https://github.com/flubstep/extreme-clicking-demo"}
+          linkUrl={"https://engvalues.herokuapp.com/"}
+          tags={["react web", "tech culture", "engineering management"]}
+        />
+      </Section>
+      <h4>Small Experimental Components</h4>
+      <Section className="ProjectSection">
+        <ProjectSummary
+          imageUrl={extremeClickingScreenshot}
+          title={"Extreme clicking"}
+          codeUrl={"https://github.com/flubstep/extreme-clicking-demo"}
+          linkUrl={"https://extreme-clicking.flubdemo.com/"}
+          explanationUrl={"https://arxiv.org/abs/1708.02750"}
+          tags={["react web", "machine learning", "image annotation"]}
+        />
+        <ProjectSummary
+          imageUrl={cropperScreenshot}
+          title={"Image cropper"}
+          codeUrl={"https://github.com/flubstep/cardhouse"}
+          linkUrl={"https://cropper.flubdemo.com/"}
+          tags={["react web", "component", "image annotation"]}
+        />
+        <ProjectSummary
+          imageUrl={clappingMusicScreenshot}
+          title={"Clapping music"}
+          codeUrl={"https://github.com/flubstep/clapping-music-react"}
+          linkUrl={"https://clapping-music.flubdemo.com/"}
+          explanationUrl={"https://www.youtube.com/watch?v=FcFyl8amoEE"}
+          tags={["react web", "modern minimalist music", "steve reich"]}
+        />
+        <ProjectSummary
+          imageUrl={releventFuturamaScreenshot}
+          title={"Futurama quotes"}
+          linkUrl={"http://relevantfuturamaquote.com/"}
+          tags={["futurama", "search", "jquery", "ffmpeg"]}
+        />
+      </Section>
+      <h4>Early Game Development Work</h4>
+      <Section className="ProjectSection">
+        <ProjectSummary
+          imageUrl={flubworldScreenshot}
+          title={"Flubworld"}
+          codeUrl={"https://github.com/flubstep/deception"}
+          linkUrl={"https://www.youtube.com/watch?v=t-6osZBE3Dc&ab_channel=flubstep"}
+          tags={["three.js", "collaborative"]}
+        />
+        <ProjectSummary
+          imageUrl={puppyflatScreenshot}
+          title={"Puppyflat"}
+          codeUrl={"https://github.com/flubstep/puppyflat"}
+          linkUrl={"https://www.youtube.com/watch?v=pKl_-EGPlg0&ab_channel=flubstep"}
+          tags={["löve2d", "game development"]}
+        />
       </Section>
     </div>
   );

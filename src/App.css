@@ -4,7 +4,7 @@
 }
 
 .Section {
-  margin: 40px 0;
+  margin: 10px 0;
 }
 
 @keyframes clockwise {
@@ -53,17 +53,17 @@
 
 .ProjectSummary {
   width: 100%;
-  margin-bottom: 40px;
 }
 
 .Column {
-  margin-right: 20px;
+  margin-right: 10px;
   max-width: 480px;
 }
 
 .ProjectSummary img {
   width: 100%;
-  border: 10px solid white;
+  border: 1px solid #999;
+  border-radius: 4px;
 }
 
 .ProjectSummary .project-title {
@@ -78,18 +78,20 @@
   font-size: 16px;
 }
 
-@media (min-width: 854px) {
-  .ProjectSection {
-    display: flex;
-  }
+.ProjectSection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
+@media (min-width: 854px) {
   .App {
     padding: 40px 80px;
     font-size: 20px;
   }
 
   .Section {
-    margin: 60px 0;
+    margin: 20px 0;
     max-width: 960px;
   }
 
@@ -97,54 +99,30 @@
   }
 
   .ProjectSummary {
-    width: 300px;
+    width: 220px;
   }
 
   .Column {
-    margin-right: 60px;
+    margin-right: 20px;
   }
 }
 
 @keyframes fadeup-50 {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  50% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(10px); }
+  50% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeup-75 {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  75% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(10px); }
+  75% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadein-75 {
-  0% {
-    opacity: 0;
-  }
-  75% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  0% { opacity: 0; }
+  75% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 .TitleSection {
@@ -156,5 +134,13 @@
 }
 
 .ProjectSummary {
+  animation: fadein-75 2000ms ease-in;
+}
+
+
+h4 {
+  margin: 0;
+  margin-top: 40px;
+  text-decoration: underline;
   animation: fadein-75 2000ms ease-in;
 }
