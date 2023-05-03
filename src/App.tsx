@@ -100,12 +100,12 @@ function App() {
       </Section>
       <Section className="DescriptionSection">
         <div>
-          I am a <span className="text-red">programmer</span> based out of New York.
+          I am a <span className="text-red">generalist programmer</span> based out of New York.
           <br />
           <br />
-          My work has typically been as a generalist role with early-stage companies and startups;
-          I've largely been supporting application development across a lot of tech, including with
-          AWS, React, Unity, and WebGL. I enjoy working on all sorts of problems!
+          My work has typically been with early-stage companies and startups; I've largely been
+          supporting application development across a lot of tech, including with AWS, React, Unity,
+          and WebGL. I enjoy working on all sorts of problems!
         </div>
       </Section>
       <h4>➤ LiDAR Visualization</h4>
