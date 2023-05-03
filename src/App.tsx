@@ -110,8 +110,10 @@ function App() {
           learning, creator economies, or anything with novel user interfaces.
           <br />
           <br />
-          I've worked at places like <a href="https://quora.com">Quora</a>,{" "}
-          <a href="https://patreon.com">Patreon</a>, <a href="https://scale.com">Scale</a>,{" "}
+          I've worked at places like <a href="https://www.quora.com/profile/Albert-Sheu">
+            Quora
+          </a>, <a href="https://patreon.com">Patreon</a>,{" "}
+          <a href="https://scale.com/spellbook">Scale</a>,{" "}
           <a href="https://empowerproject.us/">Empower</a>, and a few others.
         </div>
       </Section>
