@@ -104,10 +104,10 @@ function App() {
           I am a <span className="text-red">generalist programmer</span> based out of New York.
           <br />
           <br />
-          My work has typically been with early-stage companies and startups; I've largely been
-          supporting product development across a lot of tech, including AWS, React, Unity, and
-          WebGL. I really enjoy working with new problems, especially in 3D, linguistics, machine
-          learning, creator economies, or anything with novel user interfaces.
+          My work has centered around early-stage startups, largely supporting product development
+          across a lot of tech, including AWS, React, Unity, and WebGL. I really enjoy working with
+          new problems, especially in 3D, linguistics, machine learning, creator economies, or
+          anything with novel aesthetics or user interfaces.
           <br />
           <br />
           I've worked at places like <a href="https://www.quora.com/profile/Albert-Sheu">
