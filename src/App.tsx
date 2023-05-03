@@ -129,14 +129,13 @@ function App() {
         <ProjectSummary
           imageUrl={pandasetLidarRendering}
           title={"Pandaset LiDAR Rendering"}
-          codeUrl={"https://github.com/flubstep/extreme-clicking-demo"}
           linkUrl={"https://www.youtube.com/watch?v=TGMo-WQCqv8&ab_channel=flubstep"}
           tags={["webgl", "lidar"]}
         />
         <ProjectSummary
           imageUrl={lidarRansacScreenshot}
           title={"LiDAR RANSAC"}
-          codeUrl={"https://github.com/flubstep/extreme-clicking-demo"}
+          codeUrl={"https://github.com/flubstep/bluegarden"}
           linkUrl={"https://lidar-ransac.flubdemo.com/"}
           explanationUrl={"https://en.wikipedia.org/wiki/Random_sample_consensus"}
           tags={["three.js", "computer vision", "lidar"]}
