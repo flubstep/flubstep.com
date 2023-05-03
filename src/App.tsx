@@ -105,8 +105,14 @@ function App() {
           <br />
           <br />
           My work has typically been with early-stage companies and startups; I've largely been
-          supporting application development across a lot of tech, including with AWS, React, Unity,
-          and WebGL. I enjoy working on all sorts of problems!
+          supporting product development across a lot of tech, including AWS, React, Unity, and
+          WebGL. I really enjoy working with new problems, especially in 3D, linguistics, machine
+          learning, creator economies, or anything with novel user interfaces.
+          <br />
+          <br />
+          I've worked at places like <a href="https://quora.com">Quora</a>,{" "}
+          <a href="https://patreon.com">Patreon</a>, <a href="https://scale.com">Scale</a>,{" "}
+          <a href="https://empowerproject.us/">Empower</a>, and a few others.
         </div>
       </Section>
       <h4>➤ LiDAR Visualization</h4>
