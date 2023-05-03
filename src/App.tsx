@@ -36,7 +36,6 @@ function ProjectSummary({
   linkUrl,
   explanationUrl,
   tags,
-  span = 1,
 }: {
   imageUrl: string;
   title: string;
