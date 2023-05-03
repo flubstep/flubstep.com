@@ -109,7 +109,7 @@ function App() {
           AWS, React, Unity, and WebGL. I enjoy working on all sorts of problems!
         </div>
       </Section>
-      <h4>LiDAR Visualization</h4>
+      <h4>➤ LiDAR Visualization</h4>
       <Section className="ProjectSection">
         <ProjectSummary
           imageUrl={pandasetLidarRendering}
@@ -128,23 +128,47 @@ function App() {
           tags={["three.js", "computer vision", "lidar"]}
         />
       </Section>
-      <h4>Software Development</h4>
       <Section className="ProjectSection">
-        <ProjectSummary
-          imageUrl={quoraScreenshot}
-          title={"Webnode parallelization"}
-          linkUrl={"https://www.quora.com/q/quora/Improving-Site-Speed"}
-          tags={["python", "parallelization", "site speed"]}
-        />
-        <ProjectSummary
-          imageUrl={engValuesScreenshot}
-          title={"Engineering value cards"}
-          codeUrl={"https://github.com/flubstep/extreme-clicking-demo"}
-          linkUrl={"https://engvalues.herokuapp.com/"}
-          tags={["react web", "tech culture", "engineering management"]}
-        />
+        <div>
+          <h4>➤ Software Development</h4>
+          <Section className="ProjectSection">
+            <ProjectSummary
+              imageUrl={quoraScreenshot}
+              title={"Webnode parallelization"}
+              linkUrl={"https://www.quora.com/q/quora/Improving-Site-Speed"}
+              tags={["python", "parallelization", "site speed"]}
+            />
+            <ProjectSummary
+              imageUrl={engValuesScreenshot}
+              title={"Engineering value cards"}
+              codeUrl={"https://github.com/flubstep/extreme-clicking-demo"}
+              linkUrl={"https://engvalues.herokuapp.com/"}
+              tags={["react web", "tech culture", "engineering management"]}
+            />
+          </Section>
+        </div>
+        <div>
+          <h4>➤ Early Game Development Learning</h4>
+          <Section className="ProjectSection">
+            <ProjectSummary
+              imageUrl={flubworldScreenshot}
+              title={"Flubworld"}
+              codeUrl={"https://github.com/flubstep/deception"}
+              linkUrl={"https://www.youtube.com/watch?v=t-6osZBE3Dc&ab_channel=flubstep"}
+              tags={["three.js", "collaborative"]}
+            />
+            <ProjectSummary
+              imageUrl={puppyflatScreenshot}
+              title={"Puppyflat"}
+              codeUrl={"https://github.com/flubstep/puppyflat"}
+              linkUrl={"https://www.youtube.com/watch?v=pKl_-EGPlg0&ab_channel=flubstep"}
+              tags={["löve2d", "game development"]}
+            />
+          </Section>
+        </div>
       </Section>
-      <h4>Small Experimental Components</h4>
+
+      <h4>➤ Small Components and Experiments</h4>
       <Section className="ProjectSection">
         <ProjectSummary
           imageUrl={extremeClickingScreenshot}
@@ -174,23 +198,6 @@ function App() {
           title={"Futurama quotes"}
           linkUrl={"http://relevantfuturamaquote.com/"}
           tags={["futurama", "search", "jquery", "ffmpeg"]}
-        />
-      </Section>
-      <h4>Early Game Development Work</h4>
-      <Section className="ProjectSection">
-        <ProjectSummary
-          imageUrl={flubworldScreenshot}
-          title={"Flubworld"}
-          codeUrl={"https://github.com/flubstep/deception"}
-          linkUrl={"https://www.youtube.com/watch?v=t-6osZBE3Dc&ab_channel=flubstep"}
-          tags={["three.js", "collaborative"]}
-        />
-        <ProjectSummary
-          imageUrl={puppyflatScreenshot}
-          title={"Puppyflat"}
-          codeUrl={"https://github.com/flubstep/puppyflat"}
-          linkUrl={"https://www.youtube.com/watch?v=pKl_-EGPlg0&ab_channel=flubstep"}
-          tags={["löve2d", "game development"]}
         />
       </Section>
     </div>
