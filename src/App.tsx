@@ -10,6 +10,7 @@ import lidarRansacScreenshot from "./images/lidar-ransac-screenshot.png";
 import quoraScreenshot from "./images/quora-screenshot.png";
 import engValuesScreenshot from "./images/engvalues-screenshot.png";
 import pandasetLidarRendering from "./images/pandaset-lidar-rendering.png";
+import dclidarScreenshot from "./images/dclidar-screenshot.png";
 import { Image } from "@chakra-ui/react";
 
 function Section({ className, children }: { className?: string; children?: React.ReactNode }) {
@@ -111,12 +112,18 @@ function App() {
       <h4>➤ LiDAR Visualization</h4>
       <Section className="ProjectSection">
         <ProjectSummary
+          imageUrl={dclidarScreenshot}
+          title={"DC LiDAR Viewer"}
+          codeUrl={"https://github.com/flubstep/washingtonthree"}
+          linkUrl={"https://dclidar.space"}
+          tags={["webgl", "lidar", "computational geometry"]}
+        />
+        <ProjectSummary
           imageUrl={pandasetLidarRendering}
           title={"Pandaset LiDAR Rendering"}
           codeUrl={"https://github.com/flubstep/extreme-clicking-demo"}
           linkUrl={"https://www.youtube.com/watch?v=TGMo-WQCqv8&ab_channel=flubstep"}
           tags={["webgl", "lidar"]}
-          span={2}
         />
         <ProjectSummary
           imageUrl={lidarRansacScreenshot}
