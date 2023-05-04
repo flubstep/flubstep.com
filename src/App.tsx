@@ -164,8 +164,8 @@ function App() {
             <ProjectSummary
               imageUrl={engValuesScreenshot}
               title={"Engineering value cards"}
-              codeUrl={"https://github.com/flubstep/extreme-clicking-demo"}
-              linkUrl={"https://engvalues.herokuapp.com/"}
+              codeUrl={"https://github.com/flubstep/engvalues"}
+              linkUrl={"https://engineering-values.netlify.app/"}
               tags={["react web", "tech culture", "engineering management"]}
             />
           </Section>
