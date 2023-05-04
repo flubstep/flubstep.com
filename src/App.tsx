@@ -87,7 +87,7 @@ function ProjectSummary({
           </span>
         )}
         {Object.entries(otherUrls).map(([name, url]) => (
-          <span className="tag">
+          <span key={name} className="tag">
             <MidDot />
             <a target="_blank" rel="noopener noreferrer" href={url}>
               {name}
