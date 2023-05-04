@@ -36,6 +36,7 @@ function ProjectSummary({
   codeUrl,
   linkUrl,
   explanationUrl,
+  otherUrls = {},
   tags,
 }: {
   imageUrl: string;
@@ -43,6 +44,7 @@ function ProjectSummary({
   codeUrl?: string;
   linkUrl?: string;
   explanationUrl?: string;
+  otherUrls?: { [name: string]: string };
   tags: string[];
   span?: number;
 }) {
@@ -84,6 +86,14 @@ function ProjectSummary({
             </a>
           </span>
         )}
+        {Object.entries(otherUrls).map(([name, url]) => (
+          <span className="tag">
+            <MidDot />
+            <a target="_blank" rel="noopener noreferrer" href={url}>
+              {name}
+            </a>
+          </span>
+        ))}
       </div>
     </div>
   );
@@ -174,7 +184,10 @@ function App() {
               imageUrl={puppyflatScreenshot}
               title={"Puppyflat"}
               codeUrl={"https://github.com/flubstep/puppyflat"}
-              linkUrl={"https://www.youtube.com/watch?v=pKl_-EGPlg0&ab_channel=flubstep"}
+              linkUrl={"https://www.youtube.com/watch?v=UeblXMrWaq4&ab_channel=flubstep"}
+              otherUrls={{
+                MacOS: "https://s3.us-east-1.wasabisys.com/puppyflat/Puppyflat.love",
+              }}
               tags={["löve2d", "game development"]}
             />
           </Section>
