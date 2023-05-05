@@ -52,7 +52,7 @@ function ProjectSummary({
     <div className="ProjectSummary">
       <a target="_blank" rel="noopener noreferrer" href={linkUrl}>
         <Image
-          boxSize={220}
+          aspectRatio={4 / 3}
           objectFit="contain"
           alt={title}
           src={imageUrl}
