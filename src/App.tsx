@@ -105,7 +105,7 @@ function App() {
       <BackgroundStripes />
       <Section className="TitleSection">
         <div className="title">
-          Albert Sheu <span className="text-red subtitle">{" // "}許國恆</span>
+          Albert Sheu <span className="text-green subtitle">{" // "}許國恆</span>
         </div>
         <div className="subtitle">and his internet presence</div>
       </Section>
